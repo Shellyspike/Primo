@@ -19,26 +19,26 @@ To install the **Primo.Networking** package, use the Dependency Manager in Primo
 
 3. Click on the funnel icon to display the list of available libraries. Find **Primo.Networking** and click **Install**.
 
-4. In the modal window that appears, agree to install **Primo.Networking.Linux**.
-
-5. Click **Save** to complete the installation.
+4. Click **Save** to complete the installation.
 
 ## Documentation
 
 For more detailed information on configuring and using **Primo.Networking**, visit [our documentation site](https://docs.primo-rpa.com).
 
-## Usage Examples
+## Library Components
 
-The library includes the following capabilities:
+The library includes the following features:
 
 - HTTP request
 - SOAP request
 
 To use an element, drag it into the workspace of the Primo RPA Studio project.
 
-### HTTP Request Examples
+### Element Properties
 
-1. Configure the HTTP request by specifying:
+#### HTTP Request
+
+1. The element includes the following properties:
    - **Basic Authentication**:
      - Login
      - Password
@@ -60,7 +60,7 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
    - **Input**:
      - Format
      - Method
-     - URL
+     - URL - required
    - **OAuth1**:
      - Consumer key
      - Consumer secret
@@ -86,7 +86,7 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
    - The message "Operation timeout expired" might indicate an incorrectly set timeout.
    - The message "Unable to connect to the remote server" might be related to system OS limitations.
 
-### SOAP Request Examples
+#### SOAP Request
 
 1. When dragging the "SOAP Request" element into the project workspace, a "Wizard" button appears on the element panel. Clicking the button opens the "Wizard" panel where you can specify the following settings:
    - **Service Description** (WSDL schema URL).
@@ -103,7 +103,7 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
      - Value,
      - Execute (button to perform the request).
 
-2. **SOAP Request Properties:**
+2. The element includes the following properties
    - **Authentication**:
      - Authentication
    - **Certificate**:
@@ -127,9 +127,9 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
      - Password
      - Secure password
    - **SOAP**:
-     - Contract
-     - Endpoint
-     - Method
+     - Contract - required
+     - Endpoint - required
+     - Method - required
      - Parameters
      - Timeout
 
