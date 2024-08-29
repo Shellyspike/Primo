@@ -1,10 +1,10 @@
 # Package Description: Primo.Networking
 
-The **Primo.Networking** package provides a powerful set of tools for working with HTTP and SOAP requests on the Linux platform. This package is especially useful for developers working with external service integration and process automation.
+The **Primo.Networking** package provides a powerful set of tools for working with HTTP and SOAP requests. This package is especially useful for developers working with external service integration and process automation.
 
 ## General Information
 
-**Primo.Networking** is a comprehensive set of elements designed for performing HTTP and SOAP requests in a Linux environment. It allows for easy configuration of requests, management of authentication, and handling of responses.
+**Primo.Networking** is a comprehensive set of elements designed for performing HTTP and SOAP requests. It allows for easy configuration of requests, management of authentication, and handling of responses.
 
 ## Getting Started
 
@@ -42,12 +42,14 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
    - **Basic Authentication**:
      - Login
      - Password
-     - Secure password
+     - Secure password - A password encrypted using SecureString.
+
    - **Client Certificate Authentication**:
      - Certificate password
-     - Check SSL
+     - Check SSL - Enable this option if SSL certificate verification is required.
      - Client SSL
-     - Secure password
+     - Secure password - Encrypted certificate password. The password encrypted with SecureString is not stored in plain text. You can retrieve it, for example, from the "Credential Manager" application.
+
    - **General**:
      - Continue on exception
      - Disable logging
@@ -57,30 +59,36 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
      - Timeout
      - Wait after (ms)
      - Wait before (ms)
+
    - **Input**:
-     - Format
-     - Method
-     - URL - required
+     - Format - Select the response format required from the server. The default is ANY - any format.
+     - Method - Select the request method. The default is GET.
+     - URL - required. The URL to which the request is made.
+
    - **OAuth1**:
      - Consumer key
      - Consumer secret
      - OAuth1 secret
      - OAuth1 token
+
    - **OAuth2**:
      - OAuth2 token
+
    - **Output**:
-     - Content
-     - Headers
-     - Status
+     - Content - The content of the server's response.
+     - Headers - The response headers.
+     - Status - The status of the server's response.
+
    - **Parameters**:
-     - Attachments
-     - Body
+     - Attachments - An array of file paths to upload in the request.
+     - Body - The request body. Note that quotation marks in the request body must be escaped using the `\` symbol. Example of escaping for JSON format: `"{\"title\":\"MyTitle\"}"`.
      - Cookies
-     - Format
-     - Headers
-     - Parameters
-     - Resource path
-     - URL segments
+     - Format - Specify the body format. The default is XML.
+     - Headers - The request headers.
+     - Parameters - The request parameters.
+     - Resource path - The path for saving the file received from the request.
+     - URL segments - A dictionary of segments added to the URL. Specified in the format "{key}".
+
 
 2. **Troubleshooting HTTP Request Configuration:**
    - The message "Operation timeout expired" might indicate an incorrectly set timeout.
@@ -103,13 +111,20 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
      - Value,
      - Execute (button to perform the request).
 
-2. The element includes the following properties
+2. The element includes the following properties:
+
    - **Authentication**:
-     - Authentication
-   - **Certificate**:
-     - Certificate
-     - Certificate password
-     - Secure certificate password
+     - Authentication - Select the authentication type from the dropdown list. Available options:
+       1) None - No authentication required by default;
+       2) Simple - Simple authentication using login and password;
+       3) Windows - Windows credentials are used;
+       4) Client Certificate - Client certificate authentication.
+
+   - **Certificate** - Parameters for the Client Certificate authentication type:
+     - Certificate - Specify the path to the certificate file or the Subject in the Root store.
+     - Certificate password - Specify the certificate password.
+     - Secure certificate password - If using an encrypted certificate password, provide it in this field as a SecureString variable.
+
    - **General**:
      - Continue on exception
      - Disable logging
@@ -119,19 +134,23 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
      - Timeout
      - Wait after (ms)
      - Wait before (ms)
+
    - **Output**:
-     - Headers
-     - Response
-   - **Simple**:
+     - Headers - The headers of the response received from the SOAP request.
+     - Response - The service's response.
+
+   - **Simple** - Parameters for the Simple authentication type:
      - Login
      - Password
-     - Secure password
+     - Secure password - If using an encrypted password, provide it in this field as a SecureString variable. Such a password is not stored in plain text in the computer's memory. It can be retrieved, for example, from the Credential Manager.
+
    - **SOAP**:
-     - Contract - required
-     - Endpoint - required
-     - Method - required
-     - Parameters
-     - Timeout
+     - Contract — Required. The service contract.
+     - Endpoint — Required. Specify the location of the WSDL schema.
+     - Method — Required. The method name.
+     - Parameters — An array of method parameters. **Important!** Classes are not supported in data types, only simple types.
+     - Timeout — Request timeout in milliseconds. Specify the maximum wait time for a server response in ms, after which, if no response is received, the request will be terminated with an error status. The default is 20000.
+
 
 ## Feedback
 
