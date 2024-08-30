@@ -27,68 +27,15 @@
 С помощью элемента "Выполнить запрос к базе данных" библиотека выполняет следующие основные функции:
 
 - **Выполнение SQL-запросов** с поддержкой именованных аргументов через `@Parameter`.
-- **Поддержка различных типов подключения** к базам данных (Ole DB, PostgreSQL, ODBC).
 - **Управление подключениями**: возможность использовать существующие подключения или настраивать новые через свойства элементов.
 
-### Примеры использования
-
-#### Инициализация подключения и выполнение SQL-запросов с получением результатов:
-
-```csharp
-LTools.Database.DatabaseApp app = LTools.Database.DatabaseApp.Init(wf, "Provider=SQLOLEDB;Data Source=<servername>;Initial Catalog=<dbname>;Integrated Security=SSPI");
-List<List<string>> data = app.Execute("SELECT * FROM Table1", true);
-System.Data.DataTable tbl = app.ExecuteQueryTbl("SELECT * FROM Table1");
-```
-#### Примеры использования в других языках:
-
-**Python**
-
-```python
-app = LTools.Database.DatabaseApp.Init(
-    wf, 
-    "Provider=SQLOLEDB;Data Source=<servername>;Initial Catalog=<dbname>;Integrated Security=SSPI"
-)
-data = app.Execute("SELECT * FROM Table1", True)
-tbl = app.ExecuteQueryTbl("SELECT * FROM Table1")
-```
-**JavaScript**
-
-```javascript
-var app = _lib.LTools.Database.DatabaseApp.Init(
-    wf, 
-    "Provider=SQLOLEDB;Data Source=<servername>;Initial Catalog=<dbname>;Integrated Security=SSPI"
-);
-var data = app.Execute("SELECT * FROM Table1", true);
-var tbl = app.ExecuteQueryTbl("SELECT * FROM Table1");
-```
 ## Состав библиотеки
 
 ### Свойства элемента «Выполнить запрос»
 
 1. **База данных**:
    - **Соединение с БД**: Переменная, содержащая инстанс соединения с БД. Свойство заполняется, если вы хотите использовать ранее установленное и активное подключение к БД. Если вы заполнили это свойство, оставьте пустыми свойства Строка соединения и Тип БД.
-   - **Строка соединения**: Строка соединения, которая будет использована для установки подключения к базе данных. Вид строки зависит от выбранного типа БД и его драйвера. Примеры строк:
-     - **Ole DB**:  
-       ```plaintext
-       "Provider=SQLOLEDB;Data Source=<servername>;Initial Catalog=<dbname>;Integrated Security=SSPI"
-       ```
-     - **PostgreSQL**:  
-       ```plaintext
-       "Host=<host>;Port=5432;Password=<password>;Username=<username>;Database=<dbname>"
-       ```
-     - **ODBC**:  
-       ```plaintext
-       "DRIVER=<ODBC Driver>; SERVER=<host>; PORT=<port number>;DATABASE=<dbname>; USER=<username>; PASSWORD=<password>"
-       ```
-     Строку можно сформировать автоматически по кнопке ![alt text](image.png) — в этом случае откроется окно мастера. Мастер будет отличаться для разных БД — убедитесь, что свойство Тип БД заполнено верно. Ниже пример мастера для Ole DB:
-     
-     ![alt text](image-2.png)
-     
-     После нажатия кнопки OK строка соединения будет автоматически записана в соответствующее свойство.
-   - **Тип БД**: Тип базы данных. Доступные варианты:
-     - Ole DB (по умолчанию)
-     - PostgreSQL
-     - ODBC
+   - **Строка соединения**: Строка соединения, которая будет использована для установки подключения к базе данных. 
 
 2. **Вывод**:
    - **Кол-во**: Количество обработанных строк.
@@ -116,32 +63,6 @@ var tbl = app.ExecuteQueryTbl("SELECT * FROM Table1");
    - **Продолжить при ошибке**
    - **Скриншот завершения**
    - **Скриншот ошибки**
-
-### Работа с аргументами
-
-Массив аргументов (`LTools.Database.Model.ArgumentsModel`) состоит из объектов `LTools.Database.Model.ArgumentsModelItem`, каждый из которых имеет следующие атрибуты:
-
-- **Position**: Порядковый номер аргумента (начинается с 0).
-- **Name**: Имя аргумента.
-- **Script**: Значение аргумента.
-
-### Примеры использования аргументов:
-
-1. **Ole DB и ODBC**:
-
-    ```sql
-    SELECT * FROM table1 WHERE id > ?
-    ```
-
-    Аргумент будет вставляться в запрос вместо знака `?` согласно заданной позиции. Имя аргумента в данном случае не имеет значения.
-
-2. **PostgreSQL**:
-
-    ```sql
-    SELECT * FROM table1 WHERE column1 = @par1
-    ```
-
-    Во время выполнения команды имя аргумента будет заменено на его значение.
 
 ## Дополнительные материалы
 
