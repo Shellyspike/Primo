@@ -39,56 +39,55 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
 #### HTTP Request
 
 1. The element includes the following properties:
-   - **Basic Authentication**:
-     - Login
-     - Password
-     - Secure password - A password encrypted using SecureString.
 
-   - **Client Certificate Authentication**:
-     - Certificate password
-     - Check SSL - Enable this option if SSL certificate verification is required.
-     - Client SSL
-     - Secure password - Encrypted certificate password. The password encrypted with SecureString is not stored in plain text. You can retrieve it, for example, from the "Credential Manager" application.
+- **Basic Authentication**:
+  - Login
+  - Password
+  - Secure password: A password encrypted using `SecureString`.
 
-   - **General**:
-     - Continue on exception
-     - Disable logging
-     - Name
-     - Screenshot on error
-     - Screenshot on finish
-     - Timeout
-     - Wait after (ms)
-     - Wait before (ms)
+- **Client Certificate Authentication**:
+  - Certificate password
+  - Check SSL: Enable this option if SSL certificate verification is required.
+  - Client SSL
+  - Secure password: Encrypted certificate password. The password encrypted with `SecureString` is not stored in plain text. You can retrieve it, for example, from the "Credential Manager" application.
 
-   - **Input**:
-     - Format - Select the response format required from the server. The default is ANY - any format.
-     - Method - Select the request method. The default is GET.
-     - URL - required. The URL to which the request is made.
+- **General**:
+  - Continue on exception: The script will continue running even if an error occurs during the execution of the element.
+  - Disable logging: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
+  - Name: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+  - Screenshot on error: A screenshot will be taken if an error occurs.
+  - Screenshot on finish: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
+  - Wait after (ms): Pause after the element is executed.
+  - Wait before (ms): Adds a pause before the element is executed.
 
-   - **OAuth1**:
-     - Consumer key
-     - Consumer secret
-     - OAuth1 secret
-     - OAuth1 token
+- **Input**:
+  - Format: Select the response format required from the server. The default is `ANY` - any format.
+  - Method: Select the request method. The default is `GET`.
+  - URL: Required. The URL to which the request is made.
 
-   - **OAuth2**:
-     - OAuth2 token
+- **OAuth1**:
+  - Consumer key
+  - Consumer secret
+  - OAuth1 secret
+  - OAuth1 token
 
-   - **Output**:
-     - Content - The content of the server's response.
-     - Headers - The response headers.
-     - Status - The status of the server's response.
+- **OAuth2**:
+  - OAuth2 token
 
-   - **Parameters**:
-     - Attachments - An array of file paths to upload in the request.
-     - Body - The request body. Note that quotation marks in the request body must be escaped using the `\` symbol. Example of escaping for JSON format: `"{\"title\":\"MyTitle\"}"`.
-     - Cookies
-     - Format - Specify the body format. The default is XML.
-     - Headers - The request headers.
-     - Parameters - The request parameters.
-     - Resource path - The path for saving the file received from the request.
-     - URL segments - A dictionary of segments added to the URL. Specified in the format "{key}".
+- **Output**:
+  - Content: The content of the server's response.
+  - Headers: The response headers.
+  - Status: The status of the server's response.
 
+- **Parameters**:
+  - Attachments: An array of file paths to upload in the request.
+  - Body: The request body. Note that quotation marks in the request body must be escaped using the `\` symbol. Example of escaping for JSON format: `"{\"title\":\"MyTitle\"}"`.
+  - Cookies
+  - Format: Specify the body format. The default is `XML`.
+  - Headers: The request headers.
+  - Parameters: The request parameters.
+  - Resource path: The path for saving the file received from the request.
+  - URL segments: A dictionary of segments added to the URL. Specified in the format `{key}`.
 
 2. **Troubleshooting HTTP Request Configuration:**
    - The message "Operation timeout expired" might indicate an incorrectly set timeout.
@@ -113,43 +112,43 @@ To use an element, drag it into the workspace of the Primo RPA Studio project.
 
 2. The element includes the following properties:
 
-   - **Authentication**:
-     - Authentication - Select the authentication type from the dropdown list. Available options:
-       1) None - No authentication required by default;
-       2) Simple - Simple authentication using login and password;
-       3) Windows - Windows credentials are used;
-       4) Client Certificate - Client certificate authentication.
+- **Authentication**:
+  - Authentication: Select the authentication type from the dropdown list. Available options:
+    1. None - No authentication required by default.
+    2. Simple - Simple authentication using login and password.
+    3. Windows - Windows credentials are used.
+    4. Client Certificate - Client certificate authentication.
 
-   - **Certificate** - Parameters for the Client Certificate authentication type:
-     - Certificate - Specify the path to the certificate file or the Subject in the Root store.
-     - Certificate password - Specify the certificate password.
-     - Secure certificate password - If using an encrypted certificate password, provide it in this field as a SecureString variable.
+- **Certificate** - Parameters for the Client Certificate authentication type:
+  - Certificate: Specify the path to the certificate file or the Subject in the Root store.
+  - Certificate password: Specify the certificate password.
+  - Secure certificate password: If using an encrypted certificate password, provide it in this field as a `SecureString` variable.
 
-   - **General**:
-     - Continue on exception
-     - Disable logging
-     - Name
-     - Screenshot on error
-     - Screenshot on finish
-     - Timeout
-     - Wait after (ms)
-     - Wait before (ms)
+- **General**:
+  - Continue on exception: The script will continue running even if an error occurs during the execution of the element.
+  - Disable logging: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
+  - Name: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+  - Screenshot on error: A screenshot will be taken if an error occurs.
+  - Screenshot on finish: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
+  - Wait after (ms): Pause after the element is executed.
+  - Wait before (ms): Adds a pause before the element is executed.
 
-   - **Output**:
-     - Headers - The headers of the response received from the SOAP request.
-     - Response - The service's response.
+- **Output**:
+  - Headers: The headers of the response received from the SOAP request.
+  - Response: The service's response.
 
-   - **Simple** - Parameters for the Simple authentication type:
-     - Login
-     - Password
-     - Secure password - If using an encrypted password, provide it in this field as a SecureString variable. Such a password is not stored in plain text in the computer's memory. It can be retrieved, for example, from the Credential Manager.
+- **Simple** - Parameters for the Simple authentication type:
+  - Login
+  - Password
+  - Secure password: If using an encrypted password, provide it in this field as a `SecureString` variable. Such a password is not stored in plain text in the computer's memory. It can be retrieved, for example, from the Credential Manager.
 
-   - **SOAP**:
-     - Contract — Required. The service contract.
-     - Endpoint — Required. Specify the location of the WSDL schema.
-     - Method — Required. The method name.
-     - Parameters — An array of method parameters. **Important!** Classes are not supported in data types, only simple types.
-     - Timeout — Request timeout in milliseconds. Specify the maximum wait time for a server response in ms, after which, if no response is received, the request will be terminated with an error status. The default is 20000.
+- **SOAP**:
+  - Contract: Required. The service contract.
+  - Endpoint: Required. Specify the location of the WSDL schema.
+  - Method: Required. The method name.
+  - Parameters: An array of method parameters. **Important!** Classes are not supported in data types, only simple types.
+  - Timeout: Request timeout in milliseconds. Specify the maximum wait time for a server response in ms, after which, if no response is received, the request will be terminated with an error status. The default is 20000.
+
 
 
 ## Feedback
