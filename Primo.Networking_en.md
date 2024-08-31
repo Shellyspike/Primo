@@ -19,7 +19,9 @@ To install the **Primo.Networking** package, use the Dependency Manager in Primo
 
 3. Click on the funnel icon to display the list of available libraries. Find **Primo.Networking** and click **Install**.
 
-4. Click **Save** to complete the installation.
+4. Click **Save**.
+
+5. In the modal window click **Install** and then **Close** to complete the installation. The package will be added to your project.
 
 ## Documentation
 

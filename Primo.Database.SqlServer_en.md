@@ -16,7 +16,9 @@ To install the **Primo.Database.SqlServer** package, use the Visual Studio Depen
 
 3. Click the funnel icon to display the list of available libraries. Find **Primo.Database.SqlServer** and click **Install**.
 
-4. Click **Save** to complete the installation. The package will be added to your project.
+4. Click **Save**.
+
+5. In the modal window click **Install** and then **Close** to complete the installation. The package will be added to your project.
 
 ## Documentation
 
