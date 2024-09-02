@@ -26,7 +26,7 @@ To install the **Primo.Messaging** package, use the Dependency Manager in Primo 
 
 ## Documentation
 
-For more detailed information on setting up and using **Primo.Messaging**, visit [the documentation on our website](https://docs.primo-rpa.ru).
+For more detailed information on setting up and using **Primo.Messaging**, visit [the documentation on our website](https://docs.primo-rpa.com).
 
 ## Library Features
 
