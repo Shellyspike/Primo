@@ -104,10 +104,6 @@ The "Disconnect DB" element terminates the connection to the database.
 
 1. **Database**:
 - **DB connection**: Required. A variable containing the database connection instance.
-   
-## Дополнительные материалы
-
-An example RPA project demonstrating the library's functionality is available in our [public repository](https://github.com/PrimoRPA/Learning).
 
 ## Feedback
 
