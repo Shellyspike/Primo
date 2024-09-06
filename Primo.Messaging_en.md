@@ -63,6 +63,8 @@ The following properties are common across multiple elements and are defined und
 - **Wait after (ms)**: Pause after the element is executed.
 - **Wait before (ms)**: Adds a pause before the element is executed.
 
+---
+
 #### AutoFAQ Integration
 
 The integration includes the following elements:
@@ -107,6 +109,8 @@ This element retrieves a list of AutoFAQ chats. It includes the following proper
 
 2. **Output**:
    - Chats
+
+---
 
 #### Telegram Integration
 
