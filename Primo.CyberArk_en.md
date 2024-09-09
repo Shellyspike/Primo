@@ -35,13 +35,13 @@ The library includes the **Password request** element, which allows requesting c
 ### Element Properties:
 
 1. **CyberArk**:
-   - **AppID** — The application identifier used to access the credentials.
+   - **AppID** — The application identifier used to access the credentials. Required.
    - **Encrypt** — A flag indicating whether the request should be encrypted.
    - **Folder** — The folder in CyberArk where the account is stored.
    - **Object** — The account object in CyberArk.
    - **Port** — The port for connecting to the CyberArk server.
    - **Reason** — The reason for requesting the credentials.
-   - **Request type**:
+   - **Request type** (required):
       - **Rest** — Use REST API to request data.
       - **Sdk** — Use SDK to interact with CyberArk.
    - **Safe** — The secure vault where the account is stored.

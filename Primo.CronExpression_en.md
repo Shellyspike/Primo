@@ -62,9 +62,9 @@ This element includes the following properties:
 1. **Output**:
    - **Result** — A list of time intervals calculated based on the specified CRON expression.
 2. **Parameters**:
-   - **Cron expression** — The CRON expression used for calculating intervals.
-   - **Start date** — The start date from which intervals are calculated.
-   - **End date** — The end date up to which intervals are calculated.
+   - **Cron expression** — The CRON expression used for calculating intervals. Required.
+   - **Start date** — The start date from which intervals are calculated. Required.
+   - **End date** — The end date up to which intervals are calculated. Required.
 
 #### Get next run times
 
@@ -75,7 +75,7 @@ This element includes the following properties:
 2. **Parameters**:
    - **After time** — The date from which the next runs will be calculated.
    - **Limit** — The number of next runs to calculate.
-   - **Cron expression** — The CRON expression used for calculating the next runs.
+   - **Cron expression** — The CRON expression used for calculating the next runs. Required.
    
 #### Get next run time
 
@@ -85,7 +85,7 @@ This element includes the following properties:
    - **Next run** — The date and time of the next run calculated based on the CRON expression.
 2. **Parameters**:
    - **After time** — The date from which the next run will be calculated.
-   - **Cron expression** — The CRON expression used for calculating the next run.
+   - **Cron expression** — The CRON expression used for calculating the next run. Required.
 
 ## Feedback
 
