@@ -133,8 +133,6 @@ All the components listed below are added to the working area inside the **MyOff
 - **Codepage**.
 - **File path**: By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
-**Note**: In all the components listed below, the table file path is specified in the "MyOffice Table" container.
-
 ---
 
 #### "Sheets" Subsection
@@ -285,8 +283,6 @@ All the components listed below are added to the working area inside the **MyOff
 2. **Text**:
    - Byte array — Byte array of the document.
    - File path — By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
-
-**Note**: In all the components listed below, the file path is specified in the "MyOffice Text" container.
 
 #### "Add table row" Component
 
