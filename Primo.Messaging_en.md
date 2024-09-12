@@ -49,7 +49,7 @@ The library includes the following features:
 
 To use an element, simply drag and drop it onto the project workspace in Primo RPA Studio.
 
-### Element Properties
+## Element Properties
 
 ### General Properties
 
@@ -65,7 +65,7 @@ The following properties are common across multiple elements and are defined und
 
 ---
 
-#### AutoFAQ Integration
+### AutoFAQ Integration
 
 The integration includes the following elements:
 
@@ -112,7 +112,7 @@ This element retrieves a list of AutoFAQ chats. It includes the following proper
 
 ---
 
-#### Telegram Integration
+### Telegram Integration
 
 The integration includes the following elements:
 
