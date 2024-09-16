@@ -7,6 +7,7 @@
 **Primo.CronExpression** offers a convenient API for parsing, analyzing, and calculating task execution times based on CRON expressions. The library supports standard and extended CRON formats, providing developers with powerful tools for scheduling and automating tasks in projects on the Primo RPA platform.
 
 ### Key Features:
+
 - **CRON Expression Parsing:** Easy and accurate parsing of CRON expressions with support for various formats.
 - **Run Time Calculation:** Retrieve the next run time, intervals, and a series of runs.
 - **Flexible Configuration:** Specify time intervals, start dates, and end dates.
@@ -40,6 +41,8 @@ The library includes the following key elements:
 - **Get all runs interval**: Calculates and returns all run intervals based on the specified CRON expression.
 - **Get next run times**: Determines and returns a list of the next task runs.
 - **Get next run time**: Determines the time of the next task run.
+
+To use an element, simply drag it into the workspace of your Primo RPA Studio project.
 
 ### Element Properties
 
