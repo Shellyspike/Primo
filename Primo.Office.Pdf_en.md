@@ -37,7 +37,7 @@ The library includes the following features:
 
 To use the element, drag it into the working field of a Primo RPA Studio project.
 
-### Element Properties
+## Element Properties
 
 ### General Properties
 
@@ -51,7 +51,7 @@ The following properties are common across multiple elements and are defined und
 - **Wait after (ms)**: Pause after the element is executed.
 - **Wait before (ms)**: Adds a pause before the element is executed.
 
-#### Get XFA form
+### Get XFA form
 
 XFA forms are interactive web forms that can be saved in PDF format. Distinctive characteristics of XFA forms:
 
@@ -77,7 +77,7 @@ Example of using the element in a Pure Code process:
 - Python: `Primo.Office.Pdf.GetXfaForm.GetTable(wf, "File path", "Password")`
 - JavaScript: `_lib.Primo.Office.Pdf.GetXfaForm.GetTable(wf, "File path", "Password");`
 
-#### Get table
+### Get table
 
 The element is designed to automatically extract tabular data from PDF documents. It provides a fast and accurate way to read tables from PDF pages, which is especially useful when processing large volumes of documents or when integrating data from PDFs into other systems and applications.
 
