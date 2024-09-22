@@ -19,7 +19,7 @@ To install the **Primo.CronExpression** package, use the Dependency Manager in P
 ### Installation Steps
 
 1. **Open the Dependency Manager:**
-   - From the main menu of Primo RPA Studio, select `Dependency Management`.
+   - From the main menu of Primo RPA Studio, select `Manage dependecies`.
    - Or right-click on the project panel and select "Dependencies" from the context menu.
 
 2. In the opened window, go to the **NuGet.org** section and enter **Primo.CronExpression** in the search bar.
