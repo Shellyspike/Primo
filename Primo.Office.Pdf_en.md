@@ -37,6 +37,24 @@ The library includes the following features:
 
 To use the element, drag it into the working field of a Primo RPA Studio project.
 
+## Usage Examples
+
+### Getting XFA Form
+
+Example of using the element in a "Pure code" process:
+
+- C#: `Primo.Office.Pdf.GetXfaForm.GetTable(wf, "File path", "Password");`
+- Python: `Primo.Office.Pdf.GetXfaForm.GetTable(wf, "File path", "Password");`
+- JavaScript: `_lib.Primo.Office.Pdf.GetXfaForm.GetTable(wf, "File path", "Password");`
+
+### Reading Table
+
+Example of using the element in a "Pure code" process:
+
+- C#: `Primo.Office.Pdf.PdfApp.GetTable(wf, "File path", "Index", "Page", "Headers", "Password");`
+- Python: `Primo.Office.Pdf.PdfApp.GetTable(wf, "File path", "Index", "Page", "Headers", "Password");`
+- JavaScript: `_lib.Primo.Office.Pdf.PdfApp.GetTable(wf, "File path", "Index", "Page", "Headers", "Password");`
+
 ## Element Properties
 
 ### General Properties
@@ -62,14 +80,14 @@ XFA forms are interactive web forms that can be saved in PDF format. Distinctive
 The element includes the following properties:
 
 1. **PDF**:
-   - **Core** — a component for processing the PDF file. Available options:
-      - **Spire** — the default component, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
-      - **Aspose** — a component for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
-   - **File path** — the path to the PDF file. Example: `"C:\\Users\\user\\Documents\\test.pdf"`. By clicking the button ![alt text](image-4.png), you can specify the file path in the Explorer.
-   - **Password** — the password to access the protected PDF document.
-   - **Secure password** — a secure way to provide a password for accessing the PDF document.
+   - Core — a component for processing the PDF file. Available options:
+      - Spire — the default component, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
+      - Aspose — a component for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
+   - File path — the path to the PDF file. Example: `"C:\\Users\\user\\Documents\\test.pdf"`. By clicking the button ![alt text](image-4.png), you can specify the file path in the Explorer.
+   - Password — the password to access the protected PDF document.
+   - Secure password — a secure way to provide a password for accessing the PDF document.
 2. **Output**:
-   - **Form** — a variable to store data from the XFA form.
+   - Form — a variable to store data from the XFA form.
 
 Example of using the element in a Pure Code process:
 
@@ -84,23 +102,17 @@ The element is designed to automatically extract tabular data from PDF documents
 The element includes the following properties:
 
 1. **PDF**:
-   - **Core** — a component for processing the PDF file. Available options:
-      - **Spire** — the default component, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
-      - **Aspose** — a component for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
-   - **File path** — the path to the PDF file. Example: `"C:\\Users\\user\\Documents\\test.pdf"`. By clicking the button ![alt text](image-4.png), you can specify the file path in the Explorer.
-   - **Headers** — indicates the presence of headers in the table.
-   - **Index** — the index of the table on the page if the page contains multiple tables. Indexing starts at zero.
-   - **Page** — the page number of the PDF document where the table is located. Indexing starts at zero.
-   - **Password** — the password to access the protected PDF document.
-   - **Secure password** — a secure way to provide a password for accessing the PDF document.
+   - Core — a component for processing the PDF file. Available options:
+      - Spire — the default component, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
+      - Aspose — a component for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
+   - File path — the path to the PDF file. Example: `"C:\\Users\\user\\Documents\\test.pdf"`. By clicking the button ![alt text](image-4.png), you can specify the file path in the Explorer.
+   - Headers — indicates the presence of headers in the table.
+   - Index — the index of the table on the page if the page contains multiple tables. Indexing starts at zero.
+   - Page — the page number of the PDF document where the table is located. Indexing starts at zero.
+   - Password — the password to access the protected PDF document.
+   - Secure password — a secure way to provide a password for accessing the PDF document.
 2. **Output**:
-   - **Variable** — a variable to store data extracted from the table in the PDF document.
-
-Example of using the element in a Pure Code process:
-
-- C# : `Primo.Office.Pdf.PdfApp.GetTable(wf, "File path", "Index", "Page", "Headers", "Password");`
-- Python: `Primo.Office.Pdf.PdfApp.GetTable(wf, "File path", "Index", "Page", "Headers", "Password");`
-- JavaScript: `_lib.Primo.Office.Pdf.PdfApp.GetTable(wf, "File path", "Index", "Page", "Headers", "Password");`
+   - Variable — a variable to store data extracted from the table in the PDF document.
 
 ### Possible Errors
 
