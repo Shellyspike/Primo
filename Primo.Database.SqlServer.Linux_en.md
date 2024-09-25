@@ -1,10 +1,10 @@
-# Primo.Database.SqlServer
+# Primo.Database.SqlServer.Linux
 
-**Primo.Database.SqlServer** is a library designed to simplify working with MS SQL Server databases in a Windows environment. The package addresses tasks related to executing SQL queries and managing database connections, providing developers with a convenient and intuitive interface.
+**Primo.Database.SqlServer.Linux** is a library designed to simplify working with MS SQL Server databases in a Linux environment. The package addresses tasks related to executing SQL queries and managing database connections, providing developers with a convenient and intuitive interface.
 
 ## Installation and Setup
 
-To install the **Primo.Database.SqlServer** package, use the Visual Studio Dependency Manager or download it from [NuGet.org](https://www.nuget.org/).
+To install the **Primo.Database.SqlServer.Linux** package, use the Visual Studio Dependency Manager or download it from [NuGet.org](https://www.nuget.org/).
 
 ### Installation via Dependency Manager:
 
@@ -14,7 +14,7 @@ To install the **Primo.Database.SqlServer** package, use the Visual Studio Depen
 
 2. In the opened window, navigate to the **NuGet.org** section and enter **Primo RPA** in the search bar.
 
-3. Click the funnel icon to display the list of available libraries. Find **Primo.Database.SqlServer** and click **Install**.
+3. Click the funnel icon to display the list of available libraries. Find **Primo.Database.SqlServer.Linux** and click **Install**.
 
 4. Click **Save**.
 
