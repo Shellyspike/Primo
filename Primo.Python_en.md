@@ -26,7 +26,7 @@ To install the **Primo.Python** package, use the Dependency Manager in Primo RPA
 
 ## Documentation
 
-For detailed information on setting up and using **Primo.Python**, please visit [our documentation](https://docs.primo-rpa.ru/primo-rpa/g_elements/el_extra/els_python).
+For detailed information on setting up and using **Primo.Python**, please visit [our documentation](https://docs.primo-rpa.com).
 
 ## Library Components
 

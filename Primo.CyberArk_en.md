@@ -1,6 +1,6 @@
 # Primo.CyberArk Package Description
 
-The **Primo.CyberArk** package provides functional elements for secure and convenient access to accounts stored in CyberArk. This allows integrating automation processes with CyberArk, ensuring reliable management of credentials. Integration with CyberArk at the [Orchestrator](https://docs.primo-rpa.ru/primo-rpa/orchestrator/intro) level is recommended.
+The **Primo.CyberArk** package provides functional elements for secure and convenient access to accounts stored in CyberArk. This allows integrating automation processes with CyberArk, ensuring reliable management of credentials. Integration with CyberArk at the [Orchestrator](https://docs.primo-rpa.com/orchestrator) level is recommended.
 
 ## General Information
 

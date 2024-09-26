@@ -95,7 +95,7 @@ Allows sending a question to the GigaChat service. To send a question successful
    - Role – the name of the role in the chat (default is `user`).
    - Token – the request token specified as a variable or constant.
 
-To view the GigaChat response, set a [breakpoint](https://docs.primo-rpa.com/primo-studio/debug) and run the [process debug](https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/process/debug). Open the current value of the variable in the Output panel.
+To view the GigaChat response, set a [breakpoint](https://docs.primo-rpa.com/primo-studio/debug) and run the [process debug](https://docs.primo-rpa.com/primo-studio/debug). Open the current value of the variable in the Output panel.
 
 ### YandexGPT Section
 
