@@ -28,7 +28,7 @@ To install the **Primo.SharePoint** package, use the Dependency Manager in Primo
 
 For detailed information on setting up and using **Primo.SharePoint**, please visit [our documentation](https://docs.primo-rpa.com/).
 
-## Library Components
+## Library Elements
 
 The library provides the following features:
 
@@ -51,7 +51,7 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.

@@ -144,7 +144,7 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.
@@ -152,7 +152,7 @@ The following properties are common across multiple elements and are defined und
 
 ## Section "ODF/OXML - Documents"
 
-All components listed below are added to the workspace within the **ODF document** element. This component connects to the ODF Documents application. The **ODF document** element includes the following properties:
+All elements listed below are added to the workspace within the **ODF document** element. This element connects to the ODF Documents application. The **ODF document** element includes the following properties:
 
 - **Text**:  
    - Byte array — byte array of the document.  
@@ -160,7 +160,7 @@ All components listed below are added to the workspace within the **ODF document
    - Password (encrypted) — protected password for the file.  
    - File path – By clicking the button ![alt text](image-3.png), you can specify the file path in the File Explorer window.
 
-### Component "Insert image"
+### Element "Insert image"
 
 This inserts an image into a Word document. The document path is specified in the **ODF document** container. By default, the image is inserted at the end of the text. To specify a different position, either the **Bookmark** or **Char index** property must be filled in. It includes the following properties:
 
@@ -169,44 +169,44 @@ This inserts an image into a Word document. The document path is specified in th
    - Image – the name of the variable that contains the image to be inserted. Required.
    - Char index – the character index for the image insertion, specified in characters. You can specify the position relative to a keyword in the text, for example. First, find the word in the document, then indicate the number of characters before or after it.
 
-### Component "Insert table"
+### Element "Insert table"
 
-This component inserts a table into the document. It functions correctly only within a container. It includes the following properties:
+This element inserts a table into the document. It functions correctly only within a container. It includes the following properties:
 
 1. **Text**:
    - Data
    - Bookmark — the name of the bookmark that defines the insertion point. If not provided, the table is inserted at the end of the text.
    - Data table
 
-### Component "Insert text"
+### Element "Insert text"
 
-This component writes data into a Word document. It includes the following properties:
+This element writes data into a Word document. It includes the following properties:
 
 1. **Text**:
    - Bookmark — the name of the bookmark that defines the insertion point. If not provided, the text is inserted at the end of the document.
    - Start — the index indicating where the insertion begins.
    - Text — the data to be entered into the document.
 
-### Component "Add table row"
+### Element "Add table row"
 
-This component adds a row to a table. It functions correctly only within the **ODF document** container. It includes the following properties:
+This element adds a row to a table. It functions correctly only within the **ODF document** container. It includes the following properties:
 
 1. **Text**:
    - Data — the row data. Example: `new List<string>(){"a","b"}`
    - Index — required. The table index (starting from zero).
    - DataRow — the row data. Example: `table.NewRow()`
 
-### Component "Replace text"
+### Element "Replace text"
 
-This component replaces all occurrences of the original text with new text. It includes the following properties:
+This element replaces all occurrences of the original text with new text. It includes the following properties:
 
 1. **Text**:
    - Old text
    - New text — required.
 
-### Component "Write table cell"
+### Element "Write table cell"
 
-This component writes text into a table cell. It functions correctly only within the **ODF document** container. It includes the following properties:
+This element writes text into a table cell. It functions correctly only within the **ODF document** container. It includes the following properties:
 
 1. **Text**:
    - Data — the cell data. Example: `"string"`
@@ -214,15 +214,15 @@ This component writes text into a table cell. It functions correctly only within
    - Column — the column index (starting from zero).
    - Row — the row index (starting from zero).
 
-### Component "Copy to clipboard"
+### Element "Copy to clipboard"
 
-This component copies text to the clipboard. It functions correctly only within the **ODF document** container. It includes the following properties:
+This element copies text to the clipboard. It functions correctly only within the **ODF document** container. It includes the following properties:
 
 1. **Text**:
    - Length — text length.
    - Start — text start.
 
-### Component "Find text"
+### Element "Find text"
 
 Searches for the specified text in the document. It functions correctly only within the **ODF document** container. It includes the following properties:
 
@@ -231,7 +231,7 @@ Searches for the specified text in the document. It functions correctly only wit
    - Variable (array) — the variable used to store an array of indices of text occurrences.
    - Text — the text to search for.
 
-### Component "Read table"
+### Element "Read table"
 
 Reads a table from the document and stores it in a variable. The file path is specified in the **ODF document** container. It includes the following properties:
 
@@ -242,14 +242,14 @@ Reads a table from the document and stores it in a variable. The file path is sp
 2. **Text**:
    - Index — required. The table index in the document.
 
-### Component "Save document"
+### Element "Save document"
 
 Saves the current state of the file. If the **File path** property is not specified, the file opened within the **ODF document** container will be saved. It includes the following properties:
 
 1. **Text**:
    - File path – the path to the ODF file. By clicking the button ![alt text](image-3.png), you can specify the file path in the File Explorer window.
 
-### Component "Delete text"
+### Element "Delete text"
 
 Deletes text of a specified length. It functions correctly only within the **ODF document** container. It includes the following properties:
 
@@ -257,7 +257,7 @@ Deletes text of a specified length. It functions correctly only within the **ODF
    - Length — the length of the text (default is until the end of the document).
    - Start — the index of the character where the text starts (indexing begins at zero, default value is zero).
 
-### Component "Text background color"
+### Element "Text background color"
 
 Processes the background color of the text in the document. It functions correctly only within the **ODF document** container. It includes the following properties:
 
@@ -270,7 +270,7 @@ Processes the background color of the text in the document. It functions correct
    - Start — the index of the character where the text starts (indexing begins at zero, default value is zero).
    - New color — the background color to be set. Example: `System.Drawing.Color.LightBlue`.
 
-### Component "Text color"
+### Element "Text color"
 
 Processes the text color in the document. It functions correctly only within the **ODF document** container. It includes the following properties:
 
@@ -283,7 +283,7 @@ Processes the text color in the document. It functions correctly only within the
    - Start — the index of the character where the text starts (indexing begins at zero, default value is zero).
    - New color — the font color to be set. Example: `System.Drawing.Color.LightBlue`.
 
-### Component "Export document"
+### Element "Export document"
 
 Exports the ODF file to the specified format. Currently, only PDF export is supported. It includes the following properties:
 
@@ -291,7 +291,7 @@ Exports the ODF file to the specified format. Currently, only PDF export is supp
    - File path — by clicking the button ![alt text](image-3.png), you can specify the file path in the File Explorer window.
    - Format — format type. Currently, only PDF is supported.
 
-### Component "Get text"
+### Element "Get text"
 
 Reads data from the document and saves the result into a variable. The file path is specified in the **ODF document** container. It includes the following properties:
 
@@ -302,7 +302,7 @@ Reads data from the document and saves the result into a variable. The file path
 
 ## Section "ODF/OXML - Tables"
 
-All the components listed below are added to the workspace inside the **ODF workbook** element. This element establishes a connection to an application that works with ODF spreadsheets. The file path for the spreadsheet is specified in the element's properties. If the file does not exist, a new one will be created. The **ODF workbook** element includes the following properties:
+All the elements listed below are added to the workspace inside the **ODF workbook** element. This element establishes a connection to an application that works with ODF spreadsheets. The file path for the spreadsheet is specified in the element's properties. If the file does not exist, a new one will be created. The **ODF workbook** element includes the following properties:
 
 1. **Text**:
    - Byte array — the byte array of the document.
@@ -315,7 +315,7 @@ All the components listed below are added to the workspace inside the **ODF work
 
 ### Subsection "Sheets"
 
-#### Component "Add sheet"
+#### Element "Add sheet"
 
 Creates a new sheet in the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -323,7 +323,7 @@ Creates a new sheet in the ODF spreadsheet. The file path is specified in the **
    - Index — the ordinal number of the sheet. Numbering starts from zero.
    - Name — the name of the new sheet. Required.
 
-#### Component "Copy sheet"
+#### Element "Copy sheet"
 
 Copies a sheet for insertion into the source file or an external ODF document. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -333,7 +333,7 @@ Copies a sheet for insertion into the source file or an external ODF document. T
    - New sheet — the name of the sheet to insert. Required.
    - File — the path to the external ODF file. If no path is specified, the copied sheet will be inserted into the source file. By clicking the button ![alt text](image-3.png), you can specify the file path in the File Explorer window.
 
-#### Component "Rename sheet"
+#### Element "Rename sheet"
 
 Renames a sheet in the ODF document. The file path is specified in the **ODF workbook** container. It includes the following properties (required):
 
@@ -341,14 +341,14 @@ Renames a sheet in the ODF document. The file path is specified in the **ODF wor
    - Index — the ordinal number of the sheet you want to rename. Numbering starts from zero.
    - Name — the new name of the sheet.
 
-#### Component "Get sheet names"
+#### Element "Get sheet names"
 
 Retrieves the list of sheets in the ODF document. The result is saved into a variable. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
 1. **Text**:
    - Variable — the name of the variable that will store the list of sheets.
 
-#### Component "Delete sheet"
+#### Element "Delete sheet"
 
 Deletes a sheet in the document by its ordinal number or name. The file path is specified in the **ODF workbook** container. It includes the following properties (required):
 
@@ -358,7 +358,7 @@ Deletes a sheet in the document by its ordinal number or name. The file path is 
 
 ---
 
-### Component "Insert chart"
+### Element "Insert chart"
 
 Creates a chart on the spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -376,7 +376,7 @@ Creates a chart on the spreadsheet. The file path is specified in the **ODF work
    - Sheet name — the name of the sheet (works only if the sheet index is not specified).
    - Type — [chart type](https://reference.aspose.com/cells/net/aspose.cells.charts/charttype/). Example: Aspose.Cells.Charts.ChartType.Column.
 
-### Component "Insert columns"
+### Element "Insert columns"
 
 Inserts columns into the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -386,7 +386,7 @@ Inserts columns into the ODF spreadsheet. The file path is specified in the **OD
    - Quantity — the number of columns to insert. The default is 1. Required.
    - Sheet name — the name of the sheet with the table. 
 
-### Component "Insert rows"
+### Element "Insert rows"
 
 Inserts rows into the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -396,7 +396,7 @@ Inserts rows into the ODF spreadsheet. The file path is specified in the **ODF w
    - Quantity — the number of rows to insert. The default is 1. Required.
    - Sheet name — the name of the sheet with the table.
 
-### Component "Select range"
+### Element "Select range"
 
 Selects a range of cells in the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -405,7 +405,7 @@ Selects a range of cells in the ODF spreadsheet. The file path is specified in t
    - Sheet index — the index of the sheet with the table.
    - Sheet name — the name of the sheet with the table.
 
-### Component "Write to cell"
+### Element "Write to cell"
 
 Writes data to a cell in the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -416,7 +416,7 @@ Writes data to a cell in the ODF spreadsheet. The file path is specified in the 
    - Sheet name — the name of the sheet with the table.
    - Cell — the cell identifier. Required.
 
-### Component "Append Range"
+### Element "Append Range"
 
 Writes data to a range of cells in the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -438,7 +438,7 @@ Writes data to a range of cells in the ODF spreadsheet. The file path is specifi
    - Sheet name — the name of the sheet with the specified range.
    - Strong type — indicates strict typing for tables. Strong type prevents data format changes when writing to the table. Disabling this parameter may result in numeric formats being incorrectly converted to strings.
 
-### Component "Write cell formula"
+### Element "Write cell formula"
 
 Writes a formula to a cell in the ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -448,7 +448,7 @@ Writes a formula to a cell in the ODF spreadsheet. The file path is specified in
    - Formula — the formula to enter into the cell.
    - Cell — the cell identifier. Required.
 
-### Component "Change font"
+### Element "Change font"
 
 Changes the font of a range of cells in an ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -462,7 +462,7 @@ Changes the font of a range of cells in an ODF spreadsheet. The file path is spe
    - Sheet name — the name of the sheet with the table.
    - Color — the font color. Example: `System.Drawing.Color.Black`.
 
-### Component "Change cells"
+### Element "Change cells"
 
 Modifies the format of cells in an ODF spreadsheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -486,7 +486,7 @@ Modifies the format of cells in an ODF spreadsheet. The file path is specified i
    - Border color — the color of the cell borders in the range. Example: `System.Drawing.Color.Black`.
    - Cells color — the color of the cells in the range. Example: `System.Drawing.Color.Black`.
 
-### Component "Copy range"
+### Element "Copy range"
 
 Copies a range of cells in an ODF spreadsheet to another sheet. The copy operation can be performed within the source file or into an external file. The path to the source file is specified in the **ODF workbook** container. The path to the external file is specified in the properties of the **Copy Range** element. It includes the following properties:
 
@@ -501,10 +501,10 @@ Copies a range of cells in an ODF spreadsheet to another sheet. The copy operati
    - Format — determines the format in which to copy the data. Available values:
       - All — copies all values, formats, and formulas from the range. Default value.
       - Values — copies only values. Cell formats and formulas are ignored — formulas are replaced with their results.
-      - Formulas — copies values and formulas. To ensure formula values display correctly when pasted, add the **Recalculate Formulas** component after copying the range.
+      - Formulas — copies values and formulas. To ensure formula values display correctly when pasted, add the **Recalculate Formulas** element after copying the range.
       - Formats — copies only cell formats, fonts, and colors. Values and formulas are ignored.
 
-### Component "Find First/Last Data Row"
+### Element "Find First/Last Data Row"
 
 Helps determine the boundaries of data within a specified column. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -524,7 +524,7 @@ Helps determine the boundaries of data within a specified column. The file path 
    - Sheet name — the name of the sheet. If the index is specified, the name can be omitted.
    - Headers row — determines if the first row contains table headers. By default, the checkbox is not checked — it is assumed that the first row does not contain headers.
 
-### Component "Find all"
+### Element "Find all"
 
 Searches for a specified value on a sheet. The file path is specified in the **ODF workbook** container. It includes the following properties:
 
@@ -535,7 +535,7 @@ Searches for a specified value on a sheet. The file path is specified in the **O
    - Sheet index — the index of the sheet. Indexing starts from zero.
    - Sheet name — the name of the sheet.
 
-### Component "Find cell"
+### Element "Find cell"
 
 Searches for a cell containing the specified text within a range of cells on a sheet. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -547,15 +547,15 @@ Searches for a cell containing the specified text within a range of cells on a s
    - Sheet index — the index of the sheet. Indexing starts from zero.
    - Sheet name — the name of the sheet.
 
-### Component "Refresh pivot tables"
+### Element "Refresh pivot tables"
 
 Updates pivot tables. Works correctly only in the **ODF workbook** container.
 
-### Component "Calculate formulas"
+### Element "Calculate formulas"
 
 Recalculates formulas in tables. Works correctly only in the **ODF workbook** container.
 
-### Component "Update chart"
+### Element "Update chart"
 
 Edits a chart in a table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -589,7 +589,7 @@ Edits a chart in a table. Works correctly only in the **ODF workbook** container
    - Variable — the variable storing the chart reference.
    - Sheet name — the name of the sheet.
 
-### Component "Sort range"
+### Element "Sort range"
 
 Sorts a range of cells in a table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -601,14 +601,14 @@ Sorts a range of cells in a table. Works correctly only in the **ODF workbook** 
       - descending — in descending order.
    - Sheet name — the name of the sheet with the table.
 
-### Component "Save workbook"
+### Element "Save workbook"
 
 Saves the file of tables. If the file path is not specified, the file of the current **ODF workbook** container will be saved. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
 1. **Table**:
    - File path — specify the file path using the button ![alt text](image-3.png) in the file explorer.
 
-### Component "Save as PDF"
+### Element "Save as PDF"
 
 Saves the ODF file in PDF format. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -619,7 +619,7 @@ Saves the ODF file in PDF format. Works correctly only in the **ODF workbook** c
    - Min. quality — determines whether to save the output file in minimal quality. By default, the checkbox is unchecked, and the file will be saved in high quality.
    - Path — the path to save the PDF file. Specify the file path using the button ![alt text](image-3.png) in the file explorer.
 
-### Component "Delete range"
+### Element "Delete range"
 
 Deletes a range of cells from the ODF table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -629,7 +629,7 @@ Deletes a range of cells from the ODF table. Works correctly only in the **ODF w
    - Sheet name — the name of the sheet with the table.
    - Cells only — indicates whether to delete only the cells in the range, not the entire rows and columns.
 
-### Component "Delete columns"
+### Element "Delete columns"
 
 Deletes selected columns from the ODF table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -639,7 +639,7 @@ Deletes selected columns from the ODF table. Works correctly only in the **ODF w
    - Quantity — the number of columns to delete. Default is 1. Required.
    - Sheet name — the name of the sheet with the table.
 
-### Component "Delete rows"
+### Element "Delete rows"
 
 Deletes selected rows from the ODF table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -649,7 +649,7 @@ Deletes selected rows from the ODF table. Works correctly only in the **ODF work
    - Quantity — the number of rows to delete. Default is 1. Required.
    - Sheet name — the name of the sheet with the table.
 
-### Component "Filter range"
+### Element "Filter range"
 
 Sets a filter for a range of cells in a table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -660,7 +660,7 @@ Sets a filter for a range of cells in a table. Works correctly only in the **ODF
    - Sheet name — the name of the sheet (works only when the sheet index is not specified).
    - Filter — the filter values. Required.
 
-### Component "Read cell formula"
+### Element "Read cell formula"
 
 Reads a formula from a cell. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -672,7 +672,7 @@ Reads a formula from a cell. Works correctly only in the **ODF workbook** contai
    - Sheet name — the name of the sheet with the cell.
    - Cell — the identifier of the cell. Required.
 
-### Component "Read range"
+### Element "Read range"
 
 Reads data from a range of cells in the ODF table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -688,7 +688,7 @@ Reads data from a range of cells in the ODF table. Works correctly only in the *
    - Sheet name — the name of the sheet.
    - Date format — explicit date format specification.
 
-### Component "Read cell"
+### Element "Read cell"
 
 Reads data from a cell on a sheet. Works correctly only in the **ODF workbook** container. It includes the following properties:
 
@@ -699,7 +699,7 @@ Reads data from a cell on a sheet. Works correctly only in the **ODF workbook** 
    - Sheet name — the name of the sheet with the cell.
    - Cell — the identifier of the cell to read. Required.
 
-### Component "Read column"
+### Element "Read column"
 
 Reads data from a column in the ODF table. Works correctly only in the **ODF workbook** container. It includes the following properties:
 

@@ -28,7 +28,7 @@ To install the **Primo.Python** package, use the Dependency Manager in Primo RPA
 
 For detailed information on setting up and using **Primo.Python**, please visit [our documentation](https://docs.primo-rpa.com).
 
-## Library Components
+## Library Elements
 
 The library provides the following features:
 
@@ -47,15 +47,15 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.
 - **Wait before (ms)**: Adds a pause before the element is executed.
 
-### Python Component
+### Python Element
 
-The **Python** component is used to establish a connection with Python and includes the following properties:
+The **Python** element is used to establish a connection with Python and includes the following properties:
 
 1. **Connection**:
    - Console – Check the box to display the console window.
@@ -63,15 +63,15 @@ The **Python** component is used to establish a connection with Python and inclu
    - Buffer size – Buffer size for data exchange. Default value: 65535.
    - Time-out – Time-out for the connection with Python in milliseconds.
 
-### Execute Script Component
+### Execute Script Element
 
-This component runs the specified Python Script. Properties:
+This element runs the specified Python Script. Properties:
 
 1. **Script**:
    - Args
    - Script – Required. The text of the script.
 
-### Add Function Component
+### Add Function Element
 
 Adds a Python function to the project. Properties:
 
@@ -79,9 +79,9 @@ Adds a Python function to the project. Properties:
    - Text – Required. The text of the script.
    - File – Path to the script file.
 
-### Get Object Component
+### Get Object Element
 
-This component allows retrieving a Python object. Properties:
+This element allows retrieving a Python object. Properties:
 
 1. **Output**:
    - Variable – The variable for saving the result.

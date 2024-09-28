@@ -63,7 +63,7 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.
@@ -80,9 +80,9 @@ XFA forms are interactive web forms that can be saved in PDF format. Distinctive
 The element includes the following properties:
 
 1. **PDF**:
-   - Core — a component for processing the PDF file. Available options:
-      - Spire — the default component, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
-      - Aspose — a component for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
+   - Core — a element for processing the PDF file. Available options:
+      - Spire — the default element, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
+      - Aspose — a element for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
    - File path — the path to the PDF file. Example: `"C:\\Users\\user\\Documents\\test.pdf"`. By clicking the button ![alt text](image-4.png), you can specify the file path in the Explorer.
    - Password — the password to access the protected PDF document.
    - Secure password — a secure way to provide a password for accessing the PDF document.
@@ -102,9 +102,9 @@ The element is designed to automatically extract tabular data from PDF documents
 The element includes the following properties:
 
 1. **PDF**:
-   - Core — a component for processing the PDF file. Available options:
-      - Spire — the default component, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
-      - Aspose — a component for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
+   - Core — a element for processing the PDF file. Available options:
+      - Spire — the default element, does not require Adobe Acrobat installation. Supports processing PDF documents without page limits and allows extracting forms, images, text, pages, and attachments with high speed and accuracy.
+      - Aspose — a element for processing and analyzing PDF documents without installing Adobe Acrobat. Supports working with pages, forms, text, images, and other objects. Limitation: the document must not exceed 3 pages.
    - File path — the path to the PDF file. Example: `"C:\\Users\\user\\Documents\\test.pdf"`. By clicking the button ![alt text](image-4.png), you can specify the file path in the Explorer.
    - Headers — indicates the presence of headers in the table.
    - Index — the index of the table on the page if the page contains multiple tables. Indexing starts at zero.
@@ -119,7 +119,7 @@ The element includes the following properties:
 When working with the **Get table** element, the following errors may occur:
 
 - **File read error**: If the file path is incorrect or the file is not accessible, a file read error may occur. Ensure that the file path is correct and the file is accessible for reading.
-- **Password issues**: If the PDF file is password-protected, an incorrect password may cause an access error. Ensure that the password is correct and is being passed to the component correctly.
+- **Password issues**: If the PDF file is password-protected, an incorrect password may cause an access error. Ensure that the password is correct and is being passed to the element correctly.
 
 ## Feedback
 

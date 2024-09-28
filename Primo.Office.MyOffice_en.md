@@ -119,7 +119,7 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.
@@ -127,7 +127,7 @@ The following properties are common across multiple elements and are defined und
 
 ### "Table" Section
 
-All the components listed below are added to the working area inside the **MyOffice Table** element. This is a component for connecting to the "MyOffice Tables" application. If the specified file does not exist, a new one will be created. The **MyOffice Table** element includes the following properties:
+All the elements listed below are added to the working area inside the **MyOffice Table** element. This is a element for connecting to the "MyOffice Tables" application. If the specified file does not exist, a new one will be created. The **MyOffice Table** element includes the following properties:
 
 - **Byte array**: Byte array of the document.
 - **Codepage**.
@@ -139,7 +139,7 @@ All the components listed below are added to the working area inside the **MyOff
 
    ##### Add sheet
    
-   A component for adding a new sheet to the Table. Includes the following properties:
+   A element for adding a new sheet to the Table. Includes the following properties:
    
    1. **Table**:
       - Columns — Number of columns.
@@ -149,21 +149,21 @@ All the components listed below are added to the working area inside the **MyOff
    
    ##### Delete sheet
    
-   A component for deleting a sheet from the Table. Includes the following properties:
+   A element for deleting a sheet from the Table. Includes the following properties:
    
    1. **Table**:
       - Index — Sheet index.
 
    ##### Get sheets
    
-   A component for retrieving the list of sheets from the Table. Includes the following properties:
+   A element for retrieving the list of sheets from the Table. Includes the following properties:
    
    1. **Output**:
       - Variable — Variable for storing the list of sheets.
 
    ##### Rename sheet
    
-   A component for renaming a sheet in the Table. Includes the following properties:
+   A element for renaming a sheet in the Table. Includes the following properties:
    
    1. **Table**:
       - Name — Name of the sheet.
@@ -171,9 +171,9 @@ All the components listed below are added to the working area inside the **MyOff
 
 ---
 
-#### "Append range" Component
+#### "Append range" Element
 
-A component that writes data from a range of cells into the Table. Includes the following properties:
+A element that writes data from a range of cells into the Table. Includes the following properties:
 
 1. **Table**:
    - Add headers — Add table column headers.
@@ -191,9 +191,9 @@ A component that writes data from a range of cells into the Table. Includes the 
    - Variable (table) — Variable for storing table value data.
    - Variable (text) — Variable for storing text value data.
 
-#### "Cell input" Component
+#### "Cell input" Element
 
-This component writes data into a cell of the Table. Includes the following properties:
+This element writes data into a cell of the Table. Includes the following properties:
 
 1. **Table**:
    - As text — Insert value as text.
@@ -203,9 +203,9 @@ This component writes data into a cell of the Table. Includes the following prop
    - Sheet name.
    - Text.
 
-#### "Insert columns" Component
+#### "Insert columns" Element
 
-A component that inserts columns into a sheet of the Table. Includes the following properties:
+A element that inserts columns into a sheet of the Table. Includes the following properties:
 
 1. **Table**:
    - Index — Index of the column, to the right of which the insertion will occur. If not specified, the insertion is done at the end of the sheet.
@@ -213,9 +213,9 @@ A component that inserts columns into a sheet of the Table. Includes the followi
    - Sheet index.
    - Sheet name.
 
-#### "Insert rows" Component
+#### "Insert rows" Element
 
-A component that inserts rows into a sheet of the Table. Includes the following properties:
+A element that inserts rows into a sheet of the Table. Includes the following properties:
 
 1. **Table**:
    - Index — Index of the row, after which the insertion will occur. If not specified, the insertion is done at the end of the sheet.
@@ -223,7 +223,7 @@ A component that inserts rows into a sheet of the Table. Includes the following 
    - Sheet index.
    - Sheet name.
 
-#### "Delete columns" Component
+#### "Delete columns" Element
 
 This element deletes columns from the Table sheet. Includes the following properties:
 
@@ -233,7 +233,7 @@ This element deletes columns from the Table sheet. Includes the following proper
    - Sheet index.
    - Sheet name.
 
-#### "Delete rows" Component
+#### "Delete rows" Element
 
 This element deletes rows from the Table sheet. Includes the following properties:
 
@@ -243,7 +243,7 @@ This element deletes rows from the Table sheet. Includes the following propertie
    - Sheet index.
    - Sheet name.
 
-#### "Read range" Component
+#### "Read range" Element
 
 This element reads data from a range of cells in the Table. Includes the following properties:
 
@@ -258,16 +258,16 @@ This element reads data from a range of cells in the Table. Includes the followi
    - Sheet index.
    - Sheet name.
 
-#### "Run macro" Component
+#### "Run macro" Element
 
-A component for executing a macro in the Table. Includes the following properties:
+A element for executing a macro in the Table. Includes the following properties:
 
 1. **Misc**:
    - Result.
 2. **Table**:
    - Macro.
 
-#### "Save workbook" Component
+#### "Save workbook" Element
 
 This element saves the current state of the Table file. If the file path is not specified, the file opened within the current Table container will be saved. Includes the following properties:
 
@@ -276,7 +276,7 @@ This element saves the current state of the Table file. If the file path is not 
 
 ### "Text" Section
 
-All the components listed below are added to the working area inside the **MyOffice Text** element. This container connects to the MyOffice Text application. If the specified file does not exist, a new one will be created. The **MyOffice Text** element includes the following properties:
+All the elements listed below are added to the working area inside the **MyOffice Text** element. This container connects to the MyOffice Text application. If the specified file does not exist, a new one will be created. The **MyOffice Text** element includes the following properties:
 
 1. **Table**:
    - Codepage
@@ -284,7 +284,7 @@ All the components listed below are added to the working area inside the **MyOff
    - Byte array — Byte array of the document.
    - File path — By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
-#### "Add table row" Component
+#### "Add table row" Element
 
 This element adds a row to a table. Includes the following properties:
 
@@ -293,7 +293,7 @@ This element adds a row to a table. Includes the following properties:
    - DataRow — Data of the row.
    - Index — Table number.
 
-#### "Export document" Component
+#### "Export document" Element
 
 This element exports a text document to another format. Includes the following properties:
 
@@ -301,14 +301,14 @@ This element exports a text document to another format. Includes the following p
    - File path — Path to the exported file (e.g., c:\folder\files.pdf).
    - Format — Format type. Currently, only the PDF format is supported.
 
-#### "Get text" Component
+#### "Get text" Element
 
 This element reads data from a text document. Includes the following properties:
 
 1. **Output**:
    - Variable — Variable for storing the reading results.
 
-#### "Insert image" Component
+#### "Insert image" Element
 
 This element inserts images into a text document. Includes the following properties:
 
@@ -318,7 +318,7 @@ This element inserts images into a text document. Includes the following propert
    - Image — Mandatory. The image to insert into the document.
    - Width — Mandatory. Width of the image. Default is 100.
 
-#### "Read table" Component
+#### "Read table" Element
 
 This element reads a table from a text document. Includes the following properties:
 
@@ -328,7 +328,7 @@ This element reads a table from a text document. Includes the following properti
 2. **Text**:
    - Index — Mandatory. Table number.
 
-#### "Replace text" Component
+#### "Replace text" Element
 
 This element replaces all occurrences of the original text with a new one. Includes the following properties (mandatory):
 
@@ -336,14 +336,14 @@ This element replaces all occurrences of the original text with a new one. Inclu
    - Old text — The text to be replaced.
    - New text — The new text for the replacement.
 
-#### "Save document" Component
+#### "Save document" Element
 
 This element saves the current state of the text file. Includes the following properties:
 
 1. **Text**:
    - File path — By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
-#### "Text input" Component
+#### "Text input" Element
 
 This element writes data into a text document. Includes the following properties:
 
@@ -353,7 +353,7 @@ This element writes data into a text document. Includes the following properties
    - Position — Text input at the beginning/end. The default is End.
    - Text — Mandatory.
 
-#### "Insert table" Component
+#### "Insert table" Element
 
 This element inserts a table into a document. Includes the following properties:
 
@@ -362,7 +362,7 @@ This element inserts a table into a document. Includes the following properties:
    - Data — Table data.
    - DataTable — Name of the variable with table data.
 
-#### "Write table cell" Component
+#### "Write table cell" Element
 
 This element writes text into a table cell. Includes the following properties:
 

@@ -63,7 +63,7 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.
@@ -71,7 +71,7 @@ The following properties are common across multiple elements and are defined und
 
 ### GigaChat
 
-#### "Get Token" Component
+#### "Get Token" Element
 
 Allows getting a token to work with the GigaChat service. To obtain a token, the client's authorization data must be specified in the element properties. Includes the following properties:
 
@@ -81,7 +81,7 @@ Allows getting a token to work with the GigaChat service. To obtain a token, the
 2. **Output**:
    - Token – the name of the variable to store the GigaChat token. The token is valid for 30 minutes after issuance.
 
-#### "Chat Question" Component
+#### "Chat Question" Element
 
 Allows sending a question to the GigaChat service. To send a question successfully, you first need to get a token. The token is valid for 30 minutes and needs to be refreshed after expiration. Includes the following properties:
 
@@ -99,7 +99,7 @@ To view the GigaChat response, set a [breakpoint](https://docs.primo-rpa.com/pri
 
 ### YandexGPT Section
 
-The following components are added to the workspace within the **Begin Chat** element. This element initiates a chat with the YandexGPT generative language model. In chat mode, you can interact with the model, clarifying tasks and supplementing previous responses. The conversation context is passed in each message and persists throughout the session unless you explicitly start a new session.
+The following elements are added to the workspace within the **Begin Chat** element. This element initiates a chat with the YandexGPT generative language model. In chat mode, you can interact with the model, clarifying tasks and supplementing previous responses. The conversation context is passed in each message and persists throughout the session unless you explicitly start a new session.
 
 The starting question is specified in the Begin Chat element properties, and the bot's response is saved in a string variable.
 
@@ -120,7 +120,7 @@ The element includes the following properties:
    - Chat name – the chat name (default is `NewChat`).
    - Role – the name of the role in the chat (default is `User`).
 
-#### "Chat Question" Component
+#### "Chat Question" Element
 
 Sends a chat question to YandexGPT. Use this element if you need to maintain a dialogue with the chatbot and send requests synchronously. Includes the following properties:
 
@@ -129,7 +129,7 @@ Sends a chat question to YandexGPT. Use this element if you need to maintain a d
 2. **Request**:
    - Question – the text of the question (required).
 
-#### "Ask Question" Component
+#### "Ask Question" Element
 
 Asks a question to YandexGPT asynchronously. Use this element if your question does not require an immediate response. In asynchronous mode, text generation takes longer, but the response will be of higher quality and cheaper. Includes the following properties:
 

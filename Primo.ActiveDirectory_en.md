@@ -1,6 +1,6 @@
 # Package Description: Primo.ActiveDirectory
 
-The **Primo.ActiveDirectory** package provides a set of components for interacting with Active Directory Domain Services, enabling the creation, deletion, and configuration of users, groups, and computers.
+The **Primo.ActiveDirectory** package provides a set of elements for interacting with Active Directory Domain Services, enabling the creation, deletion, and configuration of users, groups, and computers.
 
 ## Overview
 
@@ -84,7 +84,7 @@ To use an element, simply drag it into the workspace of your Primo RPA Studio pr
 
 ## Usage Examples of Primo.ActiveDirectory
 
-An RPA project that teaches how to work with the library's components is available on the [Learning](https://github.com/PrimoRPA/Learning) page:
+An RPA project that teaches how to work with the library's elements is available on the [Learning](https://github.com/PrimoRPA/Learning) page:
 
 1. Download the archive containing all the learning materials.
 2. Extract the archive and open the **ActiveDirectoryExamples** project in Studio.
@@ -96,7 +96,7 @@ The following properties are common across multiple elements and are defined und
 
 - **Continue on exception**: The script will continue running even if an error occurs during the execution of the element.
 - **Disable logging**: Allows disabling logging in the console (only for this element). This is useful, for example, if the element handles confidential data. There is also an option to enable/disable logging centrally for all new elements added to the project. To do this, go to `File > Settings > General > Elements` and set the desired value in the `Disable logging for new elements` checkbox.
-- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical components are used.
+- **Name**: The name of the element, which is displayed in its header and in the log. For convenience, the element name can be changed within the process, for example, when multiple identical elements are used.
 - **Screenshot on error**: A screenshot will be taken if an error occurs.
 - **Screenshot on finish**: Allows taking a screenshot upon the element's completion. All screenshots are saved in the `.Screenshots` folder, which is automatically created inside the process folder.
 - **Wait after (ms)**: Pause after the element is executed.
@@ -104,7 +104,7 @@ The following properties are common across multiple elements and are defined und
 
 ## Active Directory Connection
 
-All the components listed below are added to the workspace within the **Active Directory connection** element. This element establishes a connection with the Active Directory server and includes the following properties:
+All the elements listed below are added to the workspace within the **Active Directory connection** element. This element establishes a connection with the Active Directory server and includes the following properties:
 
 1. **Connection**:
    - Login — the format should be specified as `domain\login`.
@@ -116,7 +116,7 @@ All the components listed below are added to the workspace within the **Active D
 
 ## Section "Computers"
 
-### Component "Add computer to group"
+### Element "Add computer to group"
 
 Adds a computer to a specified group. Includes the following required properties:
 
@@ -124,7 +124,7 @@ Adds a computer to a specified group. Includes the following required properties
    - Computer unique name — the unique name of the computer.
    - Unique group name — the unique name of the group.
 
-### Component "Set computer status"
+### Element "Set computer status"
 
 Changes the status of a specified computer. Includes the following properties:
 
@@ -132,7 +132,7 @@ Changes the status of a specified computer. Includes the following properties:
    - Computer unique name — the unique name of the computer.
    - Status — required field representing the status to be set.
 
-### Component "Get computers in group"
+### Element "Get computers in group"
 
 Retrieves the list of computers in a specified group. Includes the following properties:
 
@@ -141,7 +141,7 @@ Retrieves the list of computers in a specified group. Includes the following pro
 2. **Computer**:
    - Group unique name — the unique name of the group.
 
-### Component "Get computer status"
+### Element "Get computer status"
 
 Gets the activity status of a specified computer. Includes the following properties:
 
@@ -150,7 +150,7 @@ Gets the activity status of a specified computer. Includes the following propert
 2. **Computer**:
    - Computer unique name — required field representing the unique name of the computer.
 
-### Component "Join computer to domain"
+### Element "Join computer to domain"
 
 Joins a specified computer to the domain. Includes the following properties:
 
@@ -162,7 +162,7 @@ Joins a specified computer to the domain. Includes the following properties:
    - Create computer account — indicates whether a computer account will be created in Active Directory.
    - Computer unique name — required field for the computer's unique name.
 
-### Component "Computer exists"
+### Element "Computer exists"
 
 Checks if a specified computer exists. Includes the following properties:
 
@@ -176,7 +176,7 @@ Checks if a specified computer exists. Includes the following properties:
       - Common Name — the common name of the computer in Active Directory.
       - Use Principal name — the unique identifier (e.g., computer@domain.com).
 
-### Component "Create computer"
+### Element "Create computer"
 
 Creates a new computer in Active Directory. Includes the following properties:
 
@@ -189,7 +189,7 @@ Creates a new computer in Active Directory. Includes the following properties:
    - Location — unique name of the parent record, required.
    - Properties — properties of the computer (a table with two columns: the name of the property and its value).
 
-### Component "Delete computer"
+### Element "Delete computer"
 
 Deletes a computer. Includes the following required properties:
 
@@ -197,7 +197,7 @@ Deletes a computer. Includes the following required properties:
    - Computer unique name — the unique name of the computer.
    - Recursive — specifies whether to delete along with child elements.
 
-### Component "Remove computer from group"
+### Element "Remove computer from group"
 
 Removes a specified computer from a group. Includes the following required properties:
 
@@ -205,7 +205,7 @@ Removes a specified computer from a group. Includes the following required prope
    - Unique group name — the unique name of the group.
    - Computer unique name — the unique name of the computer.
 
-### Component "Unjoin computer from domain"
+### Element "Unjoin computer from domain"
 
 Removes a specified computer from the domain. Includes the following properties:
 
@@ -217,7 +217,7 @@ Removes a specified computer from the domain. Includes the following properties:
 
 ## Section "Groups"
 
-### Component "Create group"
+### Element "Create group"
 
 Creates a new group in Active Directory. Includes the following properties:
 
@@ -230,7 +230,7 @@ Creates a new group in Active Directory. Includes the following properties:
    - Properties — group properties (a table with two columns: the property name and its value).
    - Type — the type of the group.
 
-### Component "Delete group"
+### Element "Delete group"
 
 Deletes a group. Includes the following required properties:
 
@@ -238,7 +238,7 @@ Deletes a group. Includes the following required properties:
    - Recursive — specifies whether to delete along with child elements.
    - Group unique name — the unique name of the group.
 
-### Component "Add group to group"
+### Element "Add group to group"
 
 Adds a group to a specified group. Includes the following required properties:
 
@@ -246,7 +246,7 @@ Adds a group to a specified group. Includes the following required properties:
    - Group unique name — the unique name of the group being added.
    - Unique parent group name — the unique name of the parent group.
 
-### Component "Group exists"
+### Element "Group exists"
 
 Checks if a specified group exists. Includes the following properties:
 
@@ -260,7 +260,7 @@ Checks if a specified group exists. Includes the following properties:
       - Common Name — the common name of the object in Active Directory, which can include the group's name and description.
       - Use Principal name — login in the format of an email address (e.g., user@domain.com). For groups, this value is used to search for the group by its UPN, if available.
 
-### Component "Remove group from group"
+### Element "Remove group from group"
 
 Removes a specified group from another group. Includes the following required properties:
 
@@ -270,7 +270,7 @@ Removes a specified group from another group. Includes the following required pr
 
 ## Section "General"
 
-### Component "Update object properties"
+### Element "Update object properties"
 
 Edits the properties of a specified object. Includes the following properties:
 
@@ -281,7 +281,7 @@ Edits the properties of a specified object. Includes the following properties:
    - Properties (table) — an array of properties (table with two columns: property name and value).
    - User unique name — required field for the user's unique name.
 
-### Component "Rename object"
+### Element "Rename object"
 
 Renames an object. Includes the following properties:
 
@@ -289,7 +289,7 @@ Renames an object. Includes the following properties:
    - New name — the new common name (CN) of the object.
    - User unique name — required field for the user's unique name.
 
-### Component "Move object"
+### Element "Move object"
 
 Moves an object to another group. Includes the following properties:
 
@@ -297,7 +297,7 @@ Moves an object to another group. Includes the following properties:
    - User unique name — required field for the user's unique name.
    - Unique group name — the unique name of the new parent group.
 
-### Component "Get objects by filter"
+### Element "Get objects by filter"
 
 Searches for objects according to a filter. Includes the following properties:
 
@@ -315,7 +315,7 @@ Searches for objects according to a filter. Includes the following properties:
    - Location — the distinguished name identifying the AD location.
    - Property — the property by which the filtering is performed. Required field.
 
-### Component "Get objects by LDAP filter"
+### Element "Get objects by LDAP filter"
 
 Searches for objects using an LDAP filter. Includes the following properties:
 
@@ -325,7 +325,7 @@ Searches for objects using an LDAP filter. Includes the following properties:
    - Location — the distinguished name identifying the AD location.
    - Filter — required field. The LDAP filter. For example, to search for users with `cn` starting with "Ivan", use the LDAP filter `(&(objectCategory=person)(objectClass=user)(cn=Ivan*))`.
 
-### Component "Get object properties"
+### Element "Get object properties"
 
 Retrieves the properties of a specified object. Includes the following properties:
 
@@ -336,7 +336,7 @@ Retrieves the properties of a specified object. Includes the following propertie
    - Property name — the name of the specific property. If not specified, all properties will be retrieved.
    - User unique name — required field for the user's unique name.
 
-### Component "Get object unique name"
+### Element "Get object unique name"
 
 Retrieves the unique name of an object. Includes the following properties:
 
@@ -345,7 +345,7 @@ Retrieves the unique name of an object. Includes the following properties:
 2. **Filter**:
    - SAM account name — required field for the object's SAM account name.
 
-### Component "Is object member of group"
+### Element "Is object member of group"
 
 Checks if an object is a member of a specified group. Includes the following properties:
 
@@ -358,7 +358,7 @@ Checks if an object is a member of a specified group. Includes the following pro
 
 ## Section "Users"
 
-### Component "Add user to group"
+### Element "Add user to group"
 
 Adds a user to a specified group. Includes the following required properties:
 
@@ -366,7 +366,7 @@ Adds a user to a specified group. Includes the following required properties:
    - User unique name — the unique name of the user account.
    - Group unique name — the unique name of the group.
 
-### Component "Change user password"
+### Element "Change user password"
 
 Changes the password of a user. Includes the following required properties:
 
@@ -374,7 +374,7 @@ Changes the password of a user. Includes the following required properties:
    - User unique name — the unique name of the user account.
    - Password — the new password for the user.
 
-### Component "Set user status"
+### Element "Set user status"
 
 Changes the status of the specified user. Includes the following required properties:
 
@@ -385,7 +385,7 @@ Changes the status of the specified user. Includes the following required proper
       - Unlocked — the account will be unlocked if it was locked due to incorrect password attempts or other reasons.
    - User unique name — the unique name of the user account.
 
-### Component "Get password expiration date"
+### Element "Get password expiration date"
 
 Retrieves the password expiration date of the specified user. Includes the following required properties:
 
@@ -394,7 +394,7 @@ Retrieves the password expiration date of the specified user. Includes the follo
 2. **User**:
    - User unique name — the unique name of the user account.
 
-### Component "Get user expiration date"
+### Element "Get user expiration date"
 
 Retrieves the account expiration date of the specified user. Includes the following required properties:
 
@@ -403,7 +403,7 @@ Retrieves the account expiration date of the specified user. Includes the follow
 2. **User**:
    - User unique name — the unique name of the user account.
 
-### Component "Get user groups"
+### Element "Get user groups"
 
 Retrieves the list of groups that the specified user is a member of. Includes the following required properties:
 
@@ -412,7 +412,7 @@ Retrieves the list of groups that the specified user is a member of. Includes th
 2. **User**:
    - User unique name — the unique name of the user account.
 
-### Component "Get users in group"
+### Element "Get users in group"
 
 Retrieves the list of users in a specified group. Includes the following properties:
 
@@ -421,7 +421,7 @@ Retrieves the list of users in a specified group. Includes the following propert
 2. **User**:
    - Group unique name — required field for the group's unique name.
 
-### Component "Get user status"
+### Element "Get user status"
 
 Retrieves the lock and activity status of the specified user. Includes the following required properties:
 
@@ -431,14 +431,14 @@ Retrieves the lock and activity status of the specified user. Includes the follo
 2. **User**:
    - User unique name — the unique name of the user account.
 
-### Component "Force password change"
+### Element "Force password change"
 
 Forces a password change for the user. Includes the following required properties:
 
 1. **User**:
    - User unique name — the unique name of the user account.
 
-### Component "Validate user credentials"
+### Element "Validate user credentials"
 
 Validates the credentials of the specified user. Includes the following properties:
 
@@ -450,7 +450,7 @@ Validates the credentials of the specified user. Includes the following properti
    - Password (encrypted) — the encrypted password.
    - Filter — the user filter.
 
-### Component "User exists"
+### Element "User exists"
 
 Checks the existence of the specified user. Includes the following properties:
 
@@ -461,7 +461,7 @@ Checks the existence of the specified user. Includes the following properties:
    - Location — the Active Directory location to search in.
    - Filter — the filter for the check.
 
-### Component "Create user"
+### Element "Create user"
 
 Creates a new user in Active Directory. Includes the following properties:
 
@@ -475,7 +475,7 @@ Creates a new user in Active Directory. Includes the following properties:
    - Location — required field for the unique name of the parent entry.
    - Properties — user properties (table with two columns: property name and value).
 
-### Component "Delete user"
+### Element "Delete user"
 
 Deletes a user. Includes the following required properties:
 
@@ -483,7 +483,7 @@ Deletes a user. Includes the following required properties:
    - User unique name — the unique name of the user account.
    - Recursive — flag to delete along with child elements.
 
-### Component "Set user expiration date"
+### Element "Set user expiration date"
 
 Sets the expiration date of the specified user's account. Includes the following required properties:
 
