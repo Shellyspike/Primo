@@ -55,7 +55,7 @@
 
 Описание общих свойств доступно на [нашем сайте](https://docs.primo-rpa.ru/primo-rpa/primo-rpa-studio/process/elements).
 
-### Элемент Python
+### Элемент "Python"
 
 Элемент **Python** используется для установки соединения с Python и включает следующие свойства:
 
