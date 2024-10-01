@@ -129,9 +129,10 @@ The following properties are common across multiple elements and are defined und
 
 All the elements listed below are added to the working area inside the **MyOffice Table** element. This is a element for connecting to the "MyOffice Tables" application. If the specified file does not exist, a new one will be created. The **MyOffice Table** element includes the following properties:
 
-- **Byte array**: Byte array of the document.
-- **Codepage**.
-- **File path**: By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
+1. **Table**:
+   - Byte array: Byte array of the document.
+   - Codepage.
+   - File path: By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
 ---
 
@@ -142,32 +143,32 @@ All the elements listed below are added to the working area inside the **MyOffic
    A element for adding a new sheet to the Table. Includes the following properties:
    
    1. **Table**:
-      - Columns — Number of columns.
-      - Index — Sheet index.
-      - Name — Name of the new sheet.
-      - Rows — Number of rows.
+      - Columns — number of columns. Mandatory.
+      - Index — sheet index.
+      - Name — name of the new sheet. Mandatory.
+      - Rows — number of rows. Mandatory.
    
    ##### Delete sheet
    
    A element for deleting a sheet from the Table. Includes the following properties:
    
    1. **Table**:
-      - Index — Sheet index.
+      - Index — sheet index.
 
    ##### Get sheets
    
    A element for retrieving the list of sheets from the Table. Includes the following properties:
    
    1. **Output**:
-      - Variable — Variable for storing the list of sheets.
+      - Variable — variable for storing the list of sheets.
 
    ##### Rename sheet
    
    A element for renaming a sheet in the Table. Includes the following properties:
    
    1. **Table**:
-      - Name — Name of the sheet.
-      - Index — Sheet index.
+      - Name — name of the sheet.
+      - Index — sheet index.
 
 ---
 
@@ -176,40 +177,40 @@ All the elements listed below are added to the working area inside the **MyOffic
 A element that writes data from a range of cells into the Table. Includes the following properties:
 
 1. **Table**:
-   - Add headers — Add table column headers.
-   - As text — Insert value as text.
-   - Direction — Direction of cell shift:
+   - Add headers — add table column headers.
+   - As text — insert value as text.
+   - Direction — direction of cell shift:
      - Down
      - Right
-   - Expand range — Automatically expand the range to fit the data.
-   - Number format — Format of the input number (#,#).
-   - Overwrite — Indicator to overwrite data.
-   - Range — Cell range to write (A1:D12).
+   - Expand range — automatically expand the range to fit the data.
+   - Number format — format of the input number (#,#).
+   - Overwrite — indicator to overwrite data.
+   - Range — cell range to write (A1:D12). Mandatory.
    - Sheet index.
    - Sheet name.
-   - Variable (information) — Variable for storing cell information data.
-   - Variable (table) — Variable for storing table value data.
-   - Variable (text) — Variable for storing text value data.
+   - Variable (information) — variable for storing cell information data.
+   - Variable (table) — variable for storing table value data.
+   - Variable (text) — variable for storing text value data.
 
 #### "Cell input" Element
 
 This element writes data into a cell of the Table. Includes the following properties:
 
 1. **Table**:
-   - As text — Insert value as text.
-   - Cell — Cell index.
-   - Number format — Format of the input number (#,#).
+   - As text — insert value as text.
+   - Cell — cell index. Mandatory.
+   - Number format — format of the input number (#,#).
    - Sheet index.
    - Sheet name.
-   - Text.
+   - Text — mandatory.
 
 #### "Insert columns" Element
 
 A element that inserts columns into a sheet of the Table. Includes the following properties:
 
 1. **Table**:
-   - Index — Index of the column, to the right of which the insertion will occur. If not specified, the insertion is done at the end of the sheet.
-   - Quantity — Number of columns to insert.
+   - Index — index of the column, to the right of which the insertion will occur. If not specified, the insertion is done at the end of the sheet.
+   - Quantity — number of columns to insert. Mandatory.
    - Sheet index.
    - Sheet name.
 
@@ -218,8 +219,8 @@ A element that inserts columns into a sheet of the Table. Includes the following
 A element that inserts rows into a sheet of the Table. Includes the following properties:
 
 1. **Table**:
-   - Index — Index of the row, after which the insertion will occur. If not specified, the insertion is done at the end of the sheet.
-   - Quantity — Number of rows to insert.
+   - Index — index of the row, after which the insertion will occur. If not specified, the insertion is done at the end of the sheet.
+   - Quantity — number of rows to insert. Mandatory.
    - Sheet index.
    - Sheet name.
 
@@ -228,8 +229,8 @@ A element that inserts rows into a sheet of the Table. Includes the following pr
 This element deletes columns from the Table sheet. Includes the following properties:
 
 1. **Table**:
-   - Index — Index of the column to delete.
-   - Quantity — Number of columns to delete.
+   - Index — index of the column to delete.
+   - Quantity — number of columns to delete. Mandatory.
    - Sheet index.
    - Sheet name.
 
@@ -238,8 +239,8 @@ This element deletes columns from the Table sheet. Includes the following proper
 This element deletes rows from the Table sheet. Includes the following properties:
 
 1. **Table**:
-   - Index — Index of the row to delete.
-   - Quantity — Number of rows to delete.
+   - Index — index of the row to delete.
+   - Quantity — number of rows to delete. Mandatory.
    - Sheet index.
    - Sheet name.
 
@@ -248,13 +249,13 @@ This element deletes rows from the Table sheet. Includes the following propertie
 This element reads data from a range of cells in the Table. Includes the following properties:
 
 1. **Output**:
-   - Headers row — Indicates whether the first row contains headers (for the table). If checked, headers will be taken into account.
-   - Variable (info) — Variable for storing cell information data.
-   - Variable (table) — Variable for storing table value data.
-   - Variable (text) — Variable for storing text value data.
+   - Headers row — indicates whether the first row contains headers (for the table). If checked, headers will be taken into account.
+   - Variable (info) — variable for storing cell information data.
+   - Variable (table) — variable for storing table value data.
+   - Variable (text) — variable for storing text value data.
 
 2. **Table**:
-   - Range — Range of cells to read ("A1:D12"). If not specified, the selected range will be read. If the "*" symbol is used, the entire sheet will be read.
+   - Range — range of cells to read ("A1:D12"). If not specified, the selected range will be read. If the "*" symbol is used, the entire sheet will be read.
    - Sheet index.
    - Sheet name.
 
@@ -265,14 +266,14 @@ A element for executing a macro in the Table. Includes the following properties:
 1. **Misc**:
    - Result.
 2. **Table**:
-   - Macro.
+   - Macro — mandatory.
 
 #### "Save workbook" Element
 
 This element saves the current state of the Table file. If the file path is not specified, the file opened within the current Table container will be saved. Includes the following properties:
 
 1. **Table**:
-   - File path — By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
+   - File path — by clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
 ### "Text" Section
 
@@ -281,8 +282,8 @@ All the elements listed below are added to the working area inside the **MyOffic
 1. **Table**:
    - Codepage
 2. **Text**:
-   - Byte array — Byte array of the document.
-   - File path — By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
+   - Byte array — byte array of the document.
+   - File path — by clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
 #### "Add table row" Element
 
@@ -290,87 +291,87 @@ This element adds a row to a table. Includes the following properties:
 
 1. **Text**:
    - Data
-   - DataRow — Data of the row.
-   - Index — Table number.
+   - DataRow — data of the row.
+   - Index — table number. Mandatory.
 
 #### "Export document" Element
 
 This element exports a text document to another format. Includes the following properties:
 
 1. **Word**:
-   - File path — Path to the exported file (e.g., c:\folder\files.pdf).
-   - Format — Format type. Currently, only the PDF format is supported.
+   - File path — path to the exported file (e.g., c:\folder\files.pdf).
+   - Format — format type. Currently, only the PDF format is supported.
 
 #### "Get text" Element
 
 This element reads data from a text document. Includes the following properties:
 
 1. **Output**:
-   - Variable — Variable for storing the reading results.
+   - Variable — variable for storing the reading results. Mandatory.
 
 #### "Insert image" Element
 
 This element inserts images into a text document. Includes the following properties:
 
 1. **Text**:
-   - Bookmark — Name of the bookmark that determines the start of the insertion. If not specified, the insertion is done at the end of the text.
-   - Height — Mandatory. Height of the image. Default is 100.
-   - Image — Mandatory. The image to insert into the document.
-   - Width — Mandatory. Width of the image. Default is 100.
+   - Bookmark — name of the bookmark that determines the start of the insertion. If not specified, the insertion is done at the end of the text.
+   - Height — mandatory. Height of the image. Default is 100.
+   - Image — mandatory. The image to insert into the document.
+   - Width — mandatory. Width of the image. Default is 100.
 
 #### "Read table" Element
 
 This element reads a table from a text document. Includes the following properties:
 
 1. **Output**:
-   - Data — Name of the variable to store a two-dimensional list of text data.
-   - DataTable — Name of the variable to store table data.
+   - Data — name of the variable to store a two-dimensional list of text data.
+   - DataTable — name of the variable to store table data.
 2. **Text**:
-   - Index — Mandatory. Table number.
+   - Index — mandatory. Table number.
 
 #### "Replace text" Element
 
 This element replaces all occurrences of the original text with a new one. Includes the following properties (mandatory):
 
 1. **Text**:
-   - Old text — The text to be replaced.
-   - New text — The new text for the replacement.
+   - Old text — the text to be replaced.
+   - New text — the new text for the replacement. Mandatory.
 
 #### "Save document" Element
 
 This element saves the current state of the text file. Includes the following properties:
 
 1. **Text**:
-   - File path — By clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
+   - File path — by clicking the button ![alt text](image-3.png), you can specify the file path in the Explorer window.
 
 #### "Text input" Element
 
 This element writes data into a text document. Includes the following properties:
 
 1. **Word**:
-   - Bookmark — Name of the bookmark that determines the start of the writing. If not specified, the insertion position is determined by the Position property.
+   - Bookmark — name of the bookmark that determines the start of the writing. If not specified, the insertion position is determined by the Position property.
 2. **Text**:
-   - Position — Text input at the beginning/end. The default is End.
-   - Text — Mandatory.
+   - Position — text input at the beginning/end. The default is End.
+   - Text — mandatory.
 
 #### "Insert table" Element
 
 This element inserts a table into a document. Includes the following properties:
 
 1. **Text**:
-   - Bookmark — Name of the bookmark that determines the start of the insertion. If not specified, the insertion is done at the end of the text.
-   - Data — Table data.
-   - DataTable — Name of the variable with table data.
+   - Bookmark — name of the bookmark that determines the start of the insertion. If not specified, the insertion is done at the end of the text.
+   - Data — table data.
+   - DataTable — name of the variable with table data.
 
 #### "Write table cell" Element
 
 This element writes text into a table cell. Includes the following properties:
 
 1. **Text**:
-   - Column — Column number.
-   - Data — Cell data.
-   - Index — Mandatory. Table number.
-   - Row — Row number.
+   - Column — column number.
+   - Data — cell data.
+   - Index — mandatory. Table number.
+   - Row — row number.
 
 ## Feedback
 
