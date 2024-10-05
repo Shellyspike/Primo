@@ -55,7 +55,9 @@ The following properties are common across multiple elements and are defined und
 
 ### Python Element
 
-The **Python** element is used to establish a connection with Python and includes the following properties:
+The **Python** element is used to establish a connection with Python. The **Test** button on the element's panel allows you to test the configured connection. 
+
+Includes the following properties:
 
 1. **Connection**:
    - Console – Check the box to display the console window.
@@ -65,7 +67,9 @@ The **Python** element is used to establish a connection with Python and include
 
 ### Execute Script Element
 
-This element runs the specified Python Script. Properties:
+This element runs the specified Python Script. 
+
+Includes the following properties:
 
 1. **Script**:
    - Args
@@ -73,7 +77,9 @@ This element runs the specified Python Script. Properties:
 
 ### Add Function Element
 
-Adds a Python function to the project. Properties:
+Adds a Python function to the project. If both the path to the Python script file and the Python script text are specified, the value from the file takes precedence.
+
+Includes the following properties:
 
 1. **Script** (Required):
    - Text – Required. The text of the script.
@@ -81,12 +87,14 @@ Adds a Python function to the project. Properties:
 
 ### Get Object Element
 
-This element allows retrieving a Python object. Properties:
+This element allows retrieving a Python object. 
+
+Includes the following properties:
 
 1. **Output**:
    - Variable – The variable for saving the result.
 2. **Object**:
-   - Name
+   - Name – Required.
    - Type – The data type of the object.
 
 ## Feedback
